@@ -12,12 +12,12 @@ const GroupedButton = () => {
     const handleDecrement = () => {
         setCounter(counter => counter - 1 );
     };
-   let amo=counter
+
 
     return (
         <div class="group-buttons">
             <button onClick={() => handleDecrement()} disabled={counter == 0}>-</button>
-            <button disabled id="product-icrement" onChange={()=>props.alert(amo)}>{counter}</button>
+            <button disabled id="product-icrement" >{counter}</button>
             <button onClick={() => handleIncrement()}>+</button>
         </div>
     );
