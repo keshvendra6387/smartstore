@@ -1,23 +1,20 @@
 
 import Product from '../model/product-schema.js'
 
-export const getProducts= async(request,response)=>{
-    try{
-        const products =await Product.find({});
+export const getProducts = async (request, response) => {
+    try {
+        const products = await Product.find({});
 
-        response.json(products)
+        response.json(products);
+    }catch (error) {
 
-    }catch{
-       
     }
 }
 
-export const getProductById=async(request,response)=>{
-    try{
-       
-        const products = await Product.findOne({'id': request.params.id})
+export const getProductById = async (request, response) => {
+    try {
+        const products = await Product.findOne({ 'id': request.params.id });
         response.json(products);
-    }catch(error){
-       
+    }catch (error) {
     }
 }
