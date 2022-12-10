@@ -10,7 +10,7 @@ import Midslide from './midslide';
 import Midsection from './midsection';
 
 const Home=()=>{
-  const {products}= useSelector(state => state.getProducts)
+  const {products}= useSelector(state => state.getProducts.products)
 
   const dispatch = useDispatch();
   useEffect(()=>{
